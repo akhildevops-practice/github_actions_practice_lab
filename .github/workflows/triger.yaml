@@ -1,1 +1,43 @@
+name: My First GitHub Actions Workflow
 
+on:
+  push: 
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show commit
+        run: echo "A push triggered this workflow"
+        
+      - name: show OS
+        run: uname -a
+
+      - name: show os-release
+        run: cat /etc/os-release
+
+      - name: show disk
+        run: df -h
+      - name: git version
+        run: git --version
+
+      - name: node
+        run: node -v
+
+      - name: docker
+        run: docker --version
+
+      - name: Show current directory
+        run: pwd
+
+      - name: List files
+        run: ls -la
+      - name: List .github
+        run: ls -al /home/runner/work/github_actions_lab/github_actions_lab/.github/workflows
+
+      - name: Say Hello
+        run: echo "Hello from GitHub Actions!"
