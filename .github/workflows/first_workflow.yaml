@@ -1,1 +1,14 @@
-
+name: My First GitHub Actions Workflow
+on:
+  workflow_dispatch: 
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello From GitHub Actions!"
+      - name: Show current directory
+        run: pwd
+      - name: List The Files\
+        run: ls -al
+        
