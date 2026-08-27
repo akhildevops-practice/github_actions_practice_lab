@@ -17,7 +17,7 @@ jobs:
       - name: List files
         run: ls -la
       - name: List .github
-        run: ls -al github_actions_lab/.github/workflows/
+        run: ls -al /home/runner/work/github_actions_lab/github_actions_lab/.github/workflows
 
       - name: Say Hello
         run: echo "Hello from GitHub Actions!"
