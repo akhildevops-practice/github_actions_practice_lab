@@ -10,6 +10,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        
+      - name: show OS
+        run: uname -a
 
       - name: Show current directory
         run: pwd
