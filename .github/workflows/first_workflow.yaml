@@ -14,6 +14,20 @@ jobs:
       - name: show OS
         run: uname -a
 
+      - name: show os-release
+        run: cat /etc/os-release
+
+      - name: show disk
+        run: df -h
+      - name: git version
+        run: git --version
+
+      - name: node
+        run: node -v
+
+      - name: docker
+        run: docker --version
+
       - name: Show current directory
         run: pwd
 
