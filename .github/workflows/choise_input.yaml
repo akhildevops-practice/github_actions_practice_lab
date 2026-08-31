@@ -3,7 +3,7 @@ name: Checking the input environment
 on:
   workflow_dispatch:
     inputs:
-      environment: 
+      stages: 
         description: "Select Environment"
         required: true
         type: choice
@@ -18,6 +18,6 @@ jobs:
 
     steps:
       - name: Deploy the ENV
-        run: echo "Deploy the Environment ${{ inputs.environment }}" 
+        run: echo "Deploy the Environment ${{ inputs.stages }}" 
           
         
