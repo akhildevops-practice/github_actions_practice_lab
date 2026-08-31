@@ -1,10 +1,10 @@
-name: To check the choise input
+name: Checking the input environment
 
-on: 
+on:
   workflow_dispatch:
     inputs:
-      environment:
-        description: "Choose Environmet"
+      environment: 
+        description: "Select Environment"
         required: true
         type: choice
         options:
@@ -17,5 +17,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Select The ENV
-        run: echo "Deploying to ${{ inputs.environment }}"  
+      - name: Deploy the ENV
+        run: echo "Deploy the Environment ${{ inputs.environment }}" 
+          
+        
