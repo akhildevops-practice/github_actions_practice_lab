@@ -3,7 +3,7 @@ name: Check On trigger
 on:
   push:
     branches:
-      - main
+      - akhil
 
 jobs:
   test:
