@@ -1,0 +1,28 @@
+name: Multi-Job Practice
+on: 
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test the app
+        run: |
+          echo "Testing The Code"
+          echo "Tests Passed"
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        run: |
+          echo "Building the app"
+          echo "Build is completed"
+
+  deploy:  
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: |
+          echo "Deploy the app"
+          echo "Deployed"
