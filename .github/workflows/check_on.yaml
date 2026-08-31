@@ -1,0 +1,21 @@
+name: Check On trigger
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: show branch
+        run: |
+          echo "Branch: ${{ github.ref_name }}"
+      - name: show commit
+        run: |
+          echo "Commit: ${{ github.sha }}"
+      - name: show git branch
+        run: git branch --show-current
+    
