@@ -1,7 +1,13 @@
 name: test PR's based workflow trigger
 
 on:
+  push:
+    branches: 
+      - akhil
   pull_request:
+    branches: 
+      - main
+  workflow_dispatch: 
 
 jobs:
   test:
