@@ -2,6 +2,8 @@ name: Check On trigger
 
 on:
   push:
+    branches:
+      - main
 
 jobs:
   test:
@@ -10,8 +12,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-        with:
-          ref: main
+        # with:
+        #   ref: main
           
       - name: show branch
         run: |
