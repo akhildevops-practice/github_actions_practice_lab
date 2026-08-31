@@ -15,3 +15,18 @@ jobs:
 
       - name: WorkSpace Variable
         run: echo "$GITHUB_WORKSPACE"
+
+      - name: List WorkSpace
+        run: ls -al
+
+      - name: hostname
+        run: whoami
+
+      - name: OS
+        run: uname -a
+
+      - name: Home Directory
+        run: echo "$HOME"
+      
+  
+      
