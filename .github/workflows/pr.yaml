@@ -19,6 +19,4 @@ jobs:
 
       - name: Run Tests
         run: echo "Runing test for PR"
-
-      - name: Checking multiple events
-        run: echo "Push to akhil, PR to main, manual"
+      
