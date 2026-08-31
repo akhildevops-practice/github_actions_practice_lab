@@ -1,0 +1,17 @@
+name: Runner Exploration
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check-out
+        uses: action/checkout@v4
+
+      - name: current directory
+        run: pwd
+
+      - name: WorkSpace Variable
+        run: echo "$GITHUB_WORKSPACE"
