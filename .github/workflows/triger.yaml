@@ -37,8 +37,10 @@ jobs:
 
       - name: List files
         run: ls -la
+        
       - name: hostname
         run: hostname -I
+        
       - name: List .github
         run: ls -al /home/runner/work/github_actions_lab/github_actions_lab/.github/workflows
 
