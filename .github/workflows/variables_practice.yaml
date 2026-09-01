@@ -1,0 +1,12 @@
+name: Variable Practice
+on: 
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: show app
+        run: echo "App name is ${{ vars.APP_NAME }}"
+      - name: app version
+        run: echo "App version is ${{ vars.APP_VERSION }}"
