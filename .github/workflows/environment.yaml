@@ -1,4 +1,4 @@
-name: Environment Practice
+name: Environment level Practice
 on: 
   workflow_dispatch:
 
