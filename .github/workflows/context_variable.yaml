@@ -1,0 +1,21 @@
+name: Github Context Variable
+on: 
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Github Repo
+        run: echo "REPO = ${{ github.repository}}"
+      - name: GitHub REF
+        run: echo "REF = ${{github.ref}}"
+      - name: Github Actor
+        run: echo "ACTOR = ${{github.actor}}"
+      - name: Github SHA
+        run: echo "SHA = ${{github.sha}}"
+      - name: Event
+        run: echo "Event = ${{ github.event_name }}"
+
+      - name: Workflow
+        run: echo "Workflow = ${{ github.workflow }}"
