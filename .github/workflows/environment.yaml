@@ -3,9 +3,16 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  prod:
     runs-on: ubuntu-latest
     environment: prod
+    steps:
+      - name: prod
+        run: |
+          echo "Deploying to ${{vars.APP_URL}}"
+  dev:
+    runs-on: ubuntu-latest
+    environment: dev
     steps:
       - name: prod
         run: |
