@@ -1,0 +1,12 @@
+name: Environment Practice
+on: 
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - name: prod
+        run: |
+          echo "Deploying to ${{vars.APP_URL}}"
