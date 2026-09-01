@@ -2,4 +2,3 @@
 to practice github actions
 with practical scenarios
 
-
