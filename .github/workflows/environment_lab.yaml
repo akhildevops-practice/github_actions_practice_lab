@@ -1,0 +1,26 @@
+name: Environment Lab
+on: 
+  workflow_dispatch: 
+    inputs:
+      environments:
+        description: Select Environment
+        required: true
+        type: choice
+        options:
+          - dev
+          - stage
+          - prod
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environments }}
+      
+    steps:
+      - name: show environment
+        run: |
+          echo "Environment is ${{ inputs.environments }}"
+
+      - name: show url
+        run: |
+          echo "The app url is URL = ${{ vars.APP_URL }}"
