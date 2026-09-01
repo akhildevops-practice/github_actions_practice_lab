@@ -1,0 +1,23 @@
+name: Levels of Environment Variables
+on: 
+  workflow_dispatch:
+  
+env:
+  APP_NAME: Denso
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    env:
+      APP_NAME: Hindalco
+
+    steps:
+      - name: step1
+        run: echo "Print The $APP_NAME"
+      - name: Step2
+        env:
+          APP_NAME: Sanmar
+        run: echo "Print the $APP_NAME"
+      - name: step3
+        run: echo "Print the $APP_NAME"
