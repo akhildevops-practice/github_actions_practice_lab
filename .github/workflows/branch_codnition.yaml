@@ -1,0 +1,22 @@
+name: branch_condition
+on: 
+  push:
+    branches:
+      - main
+      - akhil
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: show branch
+        run: echo "This is ${{ github.ref }}"
+
+      - name: Main Branch
+        if: github.ref == 'refs/head/main'
+        run: echo "This is Main"
+      - name: akhil branch
+        if: github.ref == 'refs/head/akhil'
+        run: echo "This is Develop"
+        
+      
