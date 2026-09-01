@@ -11,4 +11,8 @@ jobs:
           echo "SHA: $GITHUB_SHA"
           echo "REPO: $GITHUB_REPOSITORY"
           echo "ACTOR: $GITHUB_ACTOR"
-          echo "Ref: $GITHUB_REF"
+          echo "${{github.ref}}"
+          echo "${{github.sha}}"
+          echo "${{github.repository}}"
+          echo "${{github.actor}}"
+          
