@@ -1,0 +1,13 @@
+name: Environment Practice
+on:
+  workflow_dispatch:
+
+env:
+  APP_NAME: prodle
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: SHOW APP NAME
+        run: echo "My APP Name is $APP_NAME"
