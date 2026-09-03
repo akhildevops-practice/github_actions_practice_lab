@@ -22,9 +22,9 @@ jobs:
 
       - name: Build & push
         uses: docker\build-push-action@v7
-        with:|
+        with:
           file: Dockerfile
           push: true
-          tags:|
+          tags:
             ghcr.io/${{ steps.owner.outputs.value }}/nginx_docker:latest 
           
